@@ -17,8 +17,8 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   @override
-  void initState() {
-    super.initState();
+  void didChangeDependencies() {
+    super.didChangeDependencies();
     final timerProvider = Provider.of<TimerProvider>(context, listen: false);
     final creatureProvider = Provider.of<CreatureProvider>(context, listen: false);
 
