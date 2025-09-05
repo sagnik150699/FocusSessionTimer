@@ -1,7 +1,7 @@
 
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audioplayers.t';
+import 'package:audioplayers/audioplayers.dart';
 
 class TimerProvider with ChangeNotifier {
   Timer? _timer;

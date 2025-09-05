@@ -50,6 +50,11 @@ This document outlines the design, features, and development plan for the "Focus
 - **Root Cause:** Aggressive caching by the browser and Firebase Hosting's CDN.
 - **Solution:** Renamed the favicon file (e.g., from `favicon.png` to `favicon_v2.png`) and updated the `web/index.html` file to reference the new filename. This "cache busting" technique forced the CDN and browser to download the new file.
 
+### Audio Player Typo (v1.5.1)
+- **Problem:** `flutter analyze` reported errors related to the `audioplayers` package.
+- **Root Cause:** A typo was made in the import statement in `lib/timer_provider.dart` (`audioplayers.t` instead of `audioplayers.dart`).
+- **Solution:** The import statement was corrected, and `flutter analyze` now passes without any issues.
+
 ## Deployment
 
 ### Firebase Hosting (v1.3.0, v1.4.1)
@@ -64,7 +69,7 @@ This document outlines the design, features, and development plan for the "Focus
 ### App Icons (v1.4.0)
 - **Package:** Used the `flutter_launcher_icons` package to generate app icons for all platforms (iOS, Android, web, macOS, Windows).
 - **Source Image:** A placeholder icon (`assets/images/icon.png`) is used as the source. This can be replaced with a final design in the future.
-- **Web Configuration (v1.4.1):** Updated `web/manifest.json` and `web/index.html` to ensure the new icons and favicon are correctly displayed.
+- **Web Configuration (v1.4.1)::** Updated `web/manifest.json` and `web/index.html` to ensure the new icons and favicon are correctly displayed.
 
 ### Audio Assets
 - **Button Clicks:** The application is configured to play a sound for button interactions. A file named `click.mp3` must be placed in the `assets/audio/` directory for this feature to work.
