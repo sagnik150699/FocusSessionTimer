@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
       final color = brightness == Brightness.light ? primarySeedColor : primarySeedColor.shade200;
       return ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          shape: RoundedRectangle-Border(borderRadius: BorderRadius.circular(12)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
           textStyle: GoogleFonts.montserrat(fontSize: 16, fontWeight: FontWeight.w600),
           elevation: 8,
@@ -60,7 +60,7 @@ class MyApp extends StatelessWidget {
       final shadowColor = brightness == Brightness.light ? primarySeedColor : Colors.black;
       return CardThemeData(
         elevation: 12,
-        shape: RoundedRectangle-Border(borderRadius: BorderRadius.circular(24)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
         shadowColor: shadowColor.withAlpha(brightness == Brightness.light ? 60 : 150),
       );
     }
@@ -89,7 +89,6 @@ class MyApp extends StatelessWidget {
       colorScheme: ColorScheme.fromSeed(
         seedColor: primarySeedColor,
         brightness: Brightness.dark,
-        background: Colors.grey[900], 
         surface: Colors.grey[850],
       ),
       textTheme: appTextTheme.apply(

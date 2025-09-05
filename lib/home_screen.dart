@@ -82,6 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   const SizedBox(height: 40),
                   SleekCircularSlider(
                     appearance: CircularSliderAppearance(
+                      size: 250,
                       customWidths: CustomSliderWidths(
                         trackWidth: 12,
                         progressBarWidth: 20,
@@ -96,6 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainLabelStyle: Theme.of(context).textTheme.displayLarge?.copyWith(
                               color: Theme.of(context).colorScheme.primary,
                               fontSize: 48,
+                              letterSpacing: 0,
                             ),
                         modifier: (double value) {
                           final minutes = (value / 60).floor().toString().padLeft(2, '0');
