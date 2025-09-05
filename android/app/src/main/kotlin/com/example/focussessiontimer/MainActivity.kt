@@ -1,4 +1,4 @@
-package com.example.myapp
+package com.example.focussessiontimer
 
 import io.flutter.embedding.android.FlutterActivity
 

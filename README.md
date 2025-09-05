@@ -1,6 +1,6 @@
-# My Flutter App
+# Focus Session Timer
 
-A new Flutter project created in Firebase Studio.
+A Focus Session Timer application built with Flutter.
 
 ## Getting Started
 
