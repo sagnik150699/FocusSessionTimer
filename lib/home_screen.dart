@@ -50,6 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               onPressed: () {
                 HapticFeedback.mediumImpact();
+                timerProvider.playClickSound();
                 themeProvider.toggleTheme();
               },
             ),
@@ -127,6 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: ElevatedButton.icon(
                             onPressed: () {
                               HapticFeedback.mediumImpact();
+                              timerProvider.playClickSound();
                               timerProvider.startTimer();
                             },
                             icon: const Icon(Icons.play_arrow),
@@ -139,6 +141,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: ElevatedButton.icon(
                             onPressed: () {
                               HapticFeedback.mediumImpact();
+                              timerProvider.playClickSound();
                               timerProvider.stopTimer();
                             },
                             style: ElevatedButton.styleFrom(
@@ -154,6 +157,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: ElevatedButton.icon(
                           onPressed: () {
                             HapticFeedback.mediumImpact();
+                            timerProvider.playClickSound();
                             timerProvider.resetTimer();
                           },
                           style: ElevatedButton.styleFrom(

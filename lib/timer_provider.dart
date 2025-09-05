@@ -1,12 +1,14 @@
 
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.t';
 
 class TimerProvider with ChangeNotifier {
   Timer? _timer;
   int _duration = 25 * 60;
   int _current = 25 * 60;
   bool _isRunning = false;
+  final AudioPlayer _audioPlayer = AudioPlayer();
 
   VoidCallback? onMilestoneReached;
   VoidCallback? onSessionInterrupted;
@@ -56,6 +58,14 @@ class TimerProvider with ChangeNotifier {
     _timer?.cancel();
     _current = _duration;
     notifyListeners();
+  }
+
+  Future<void> playClickSound() async {
+    try {
+      await _audioPlayer.play(AssetSource('audio/click.mp3'));
+    } catch (e) {
+      // Handle error
+    }
   }
 
   String get timeString {
