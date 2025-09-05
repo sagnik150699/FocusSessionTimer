@@ -1,11 +1,11 @@
 {
-    "name": "FocusSessionTimer",
-    "short_name": "FocusSessionTimer",
+    "name": "Focus Session Timer",
+    "short_name": "Focus Timer",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A Focus Session Timer application built with Flutter.",
+    "description": "A gamified focus session timer built with Flutter.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

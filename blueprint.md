@@ -46,12 +46,19 @@ This document outlines the design, features, and development plan for the "Focus
 
 ## Deployment
 
-### Firebase Hosting (v1.3.0)
+### Firebase Hosting (v1.3.0, v1.4.1)
 - **Project Creation:** A new Firebase project (`focus-session-timer`) was created.
 - **Web App:** A web app was added to the Firebase project.
 - **Hosting Initialization:** Firebase Hosting was initialized, with the public directory set to `build/web`.
 - **Deployment:** The Flutter web app was built for release and deployed to Firebase Hosting.
 - **Hosting URL:** The app is now live at: https://focus-session-timer.web.app
+
+## Asset Management
+
+### App Icons (v1.4.0)
+- **Package:** Used the `flutter_launcher_icons` package to generate app icons for all platforms (iOS, Android, web, macOS, Windows).
+- **Source Image:** A placeholder icon (`assets/images/icon.png`) is used as the source. This can be replaced with a final design in the future.
+- **Web Configuration (v1.4.1):** Updated `web/manifest.json` and `web/index.html` to ensure the new icons and favicon are correctly displayed.
 
 ## Current Plan
 

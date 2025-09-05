@@ -2,15 +2,10 @@
 # Focus Session Timer
 
 [![Flutter CI](https://github.com/your_github_username/focus_session_timer/actions/workflows/flutter.yml/badge.svg)](https://github.com/your_github_username/focus_session_timer/actions/workflows/flutter.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Live Demo: [https://focus-session-timer.web.app](https://focus-session-timer.web.app)**
 
 A gamified focus session timer built with Flutter. This application helps you stay productive by turning your focus sessions into a game where you nurture a virtual creature.
-
-##  Screenshots
-
-*(Coming Soon)*
 
 ## Features
 
@@ -66,6 +61,12 @@ This project is deployed to Firebase Hosting. To deploy your own version, you wi
     ```bash
     firebase deploy --only hosting
     ```
+
+## License
+
+Copyright (c) 2024 Sagnik Bhattacharya. All Rights Reserved.
+
+Unauthorized copying of this file, via any medium, is strictly prohibited.
 
 ## About the Author
 
