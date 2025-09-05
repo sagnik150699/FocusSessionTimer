@@ -1,9 +1,10 @@
+
 import 'dart:async';
 import 'package:flutter/material.dart';
 
 class TimerProvider with ChangeNotifier {
   Timer? _timer;
-  final int _start = 25 * 60;
+  int _duration = 25 * 60;
   int _current = 25 * 60;
   bool _isRunning = false;
 
@@ -11,36 +12,49 @@ class TimerProvider with ChangeNotifier {
   VoidCallback? onSessionInterrupted;
 
   int get current => _current;
+  int get duration => _duration;
   bool get isRunning => _isRunning;
 
+  void setDuration(int seconds) {
+    if (!_isRunning) {
+      _duration = seconds;
+      _current = seconds;
+      notifyListeners();
+    }
+  }
+
   void startTimer() {
-    _isRunning = true;
-    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
-      if (_current > 0) {
-        _current--;
-        if ((_start - _current) % 300 == 0 && _current != _start) {
-          onMilestoneReached?.call();
+    if (_duration > 0 && !_isRunning) {
+      _isRunning = true;
+      _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+        if (_current > 0) {
+          _current--;
+          if ((_duration - _current) % 300 == 0 && _current != _duration) {
+            onMilestoneReached?.call();
+          }
+          notifyListeners();
+        } else {
+          stopTimer(completed: true);
         }
-        notifyListeners();
-      } else {
-        stopTimer(completed: true);
-      }
-    });
+      });
+    }
   }
 
   void stopTimer({bool completed = false}) {
-    _isRunning = false;
-    _timer?.cancel();
-    if (!completed) {
-      onSessionInterrupted?.call();
+    if (_isRunning) {
+      _isRunning = false;
+      _timer?.cancel();
+      if (!completed) {
+        onSessionInterrupted?.call();
+      }
+      notifyListeners();
     }
-    notifyListeners();
   }
 
   void resetTimer() {
     _isRunning = false;
     _timer?.cancel();
-    _current = _start;
+    _current = _duration;
     notifyListeners();
   }
 
