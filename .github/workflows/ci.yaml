@@ -4,26 +4,66 @@ on:
   push:
     branches: [ master ]
   pull_request:
-    branches: [ master ]  
+    branches: [ master ]
 
 jobs:
-  build:
+  analyze_and_test:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
-
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.x'
           channel: 'stable'
-
       - name: Install dependencies
         run: flutter pub get
-
       - name: Analyze project source
         run: flutter analyze
-
       - name: Run tests
         run: flutter test
+
+  build_android:
+    needs: analyze_and_test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.x'
+          channel: 'stable'
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Build Android App
+        run: flutter build apk
+
+  build_ios:
+    needs: analyze_and_test
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.x'
+          channel: 'stable'
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Build iOS App
+        run: flutter build ios --no-codesign
+
+  build_web:
+    needs: analyze_and_test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.x'
+          channel: 'stable'
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Build Web App
+        run: flutter build web
