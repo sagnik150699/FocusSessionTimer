@@ -1,10 +1,20 @@
-name: Flutter CI
+name: Web CI
 
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'web/**'
+      - 'lib/**'
+      - 'test/**'
+      - 'pubspec.yaml'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'web/**'
+      - 'lib/**'
+      - 'test/**'
+      - 'pubspec.yaml'
 
 jobs:
   build:
@@ -18,3 +28,4 @@ jobs:
       - run: flutter pub get
       - run: flutter analyze
       - run: flutter test
+      - run: flutter build web
