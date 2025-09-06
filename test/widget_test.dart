@@ -7,7 +7,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:focus_session_timer/main.dart';
 import 'package:provider/provider.dart';
 import 'package:focus_session_timer/src/providers/theme_provider.dart';
 import 'package:focus_session_timer/src/app.dart';
