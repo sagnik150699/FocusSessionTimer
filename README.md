@@ -1,77 +1,44 @@
+# Flutter Production Grade App
 
-# Focus Session Timer
-
-[![Flutter CI](https://github.com/your_github_username/focus_session_timer/actions/workflows/flutter.yml/badge.svg)](https://github.com/your_github_username/focus_session_timer/actions/workflows/flutter.yml)
-
-**Live Demo: [https://focus-session-timer.web.app](https://focus-session-timer.web.app)**
-
-A gamified focus session timer built with Flutter. This application helps you stay productive by turning your focus sessions into a game where you nurture a virtual creature.
+This is a production-grade Flutter application that demonstrates best practices in Flutter development.
 
 ## Features
 
-- **Gamified Timer:** The core of the app is a customizable timer that you can set for your focus sessions.
-- **Virtual Creature:** As you complete focus sessions, your virtual creature will grow and evolve.
-- **Penalty System:** If you get distracted and stop a session early, your creature's growth will be penalized.
-- **Customizable Sessions:** Use the sleek circular slider to set the perfect duration for your focus session.
-- **Beautiful UI:** A modern and visually appealing interface with a cool gradient background and a "glowing" theme.
-- **Light & Dark Mode:** Choose the theme that best suits your environment.
-- **Responsive Design:** The app is designed to work beautifully on both web and mobile devices.
-- **Haptic Feedback:** Feel a satisfying vibration when you interact with the timer controls.
+*   **Scalable Architecture:** The project is organized into a clean and scalable architecture, with a clear separation of concerns.
+*   **Theming:** The application supports both light and dark themes, which can be toggled by the user.
+*   **State Management:** State is managed using the `provider` package, a simple and effective solution for state management in Flutter.
+*   **UI/UX:** The UI is designed to be visually appealing and user-friendly, with a card-based layout and a placeholder image.
 
 ## Getting Started
 
-### Prerequisites
+To get started with this project, you will need to have the Flutter SDK installed on your machine. If you do not have it installed, you can follow the instructions on the [Flutter website](https://flutter.dev/docs/get-started/install).
 
-- [Flutter SDK](https://flutter.dev/docs/get-started/install)
-- [Firebase CLI](https://firebase.google.com/docs/cli#install_the_firebase_cli)
-
-### Installation
-
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/your_github_username/focus_session_timer.git
-    cd focus_session_timer
-    ```
-2.  **Install dependencies:**
-    ```bash
-    flutter pub get
-    ```
-3.  **Run the app:**
-    ```bash
-    flutter run
-    ```
-
-## Building for the Web
-
-To create a production build for the web, run the following command:
+Once you have the Flutter SDK installed, you can clone this repository and run the following command to install the dependencies:
 
 ```bash
-flutter build web --release
+flutter pub get
 ```
 
-## Deployment
+After the dependencies have been installed, you can run the application on a simulator or a physical device using the following command:
 
-This project is deployed to Firebase Hosting. To deploy your own version, you will need to set up a Firebase project and configure it for this app.
+```bash
+flutter run
+```
 
-1.  **Initialize Firebase:**
-    ```bash
-    firebase init hosting
-    ```
-2.  **Deploy to Firebase Hosting:**
-    ```bash
-    firebase deploy --only hosting
-    ```
+## Project Structure
 
-## License
+The project is organized into the following directories:
 
-Copyright (c) 2024 Sagnik Bhattacharya. All Rights Reserved.
+*   `lib/src/app.dart`: The root widget of the application.
+*   `lib/src/screens/`: Contains the screens of the application.
+*   `lib/src/providers/`: Contains the providers for state management.
 
-Unauthorized copying of this file, via any medium, is strictly prohibited.
+## Contributing
 
-## About the Author
+Contributions are welcome! If you would like to contribute to this project, please follow these steps:
 
-This project was created by Sagnik Bhattacharya. Connect with me:
-
-- [LinkedIn](https://linkedin.com/in/sagnik-bhattacharya-916b9463/)
-- [YouTube](https://www.youtube.com/@sagnikteaches)
-- [Udemy](https://www.udemy.com/user/sagnik-bhattacharya-5/)
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix.
+3.  Make your changes and commit them with a descriptive commit message.
+4.  Push your changes to your forked repository.
+5.  Create a pull request to the main repository.
