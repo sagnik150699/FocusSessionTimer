@@ -42,3 +42,11 @@ Contributions are welcome! If you would like to contribute to this project, plea
 3.  Make your changes and commit them with a descriptive commit message.
 4.  Push your changes to your forked repository.
 5.  Create a pull request to the main repository.
+
+## About the Author
+
+This project was created by Sagnik Bhattacharya. Connect with me:
+
+- [LinkedIn](https://linkedin.com/in/sagnik-bhattacharya-916b9463/)
+- [YouTube](https://www.youtube.com/@sagnikteaches)
+- [Udemy](https://www.udemy.com/user/sagnik-bhattacharya-5/)
